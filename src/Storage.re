@@ -30,4 +30,6 @@ let checkFile =
   );
 
 let () = Callback.finish(checkFile);
+
 /*File.exists(f, (. _, e) => Js.log(e)); */
+File.download(f, "/me/test.file");

@@ -6,9 +6,7 @@
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
+  "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
@@ -16,6 +14,7 @@
   },
   "dependencies": {
     "@google-cloud/storage": "^1.6.0",
+    "@lidcore/bs-node": "git+https://github.com/lidcore/bs-node.git",
     "bs-callback": "^1.0.16"
   }
 }

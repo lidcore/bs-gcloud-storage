@@ -10,7 +10,7 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": ["bs-callback"],
+  "bs-dependencies": ["bs-callback", "@lidcore/bs-node"],
   "warnings": {
     "error": "+101"
   },

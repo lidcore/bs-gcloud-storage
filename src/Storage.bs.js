@@ -28,6 +28,8 @@ function checkFile(param) {
 
 Callback.finish(/* None */0, checkFile);
 
+File$BsGcloudStorage.download(f, "/me/test.file");
+
 exports.make = make;
 exports.s = s;
 exports.b = b;
