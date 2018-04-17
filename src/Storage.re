@@ -1,3 +1,5 @@
+open Callback;
+
 type t;
 
 type config = {. [@bs.get nullable] "projectId": string};
@@ -18,5 +20,14 @@ let f =
     "4eef6f7783b8b708080c8f2f7d7087ed62eda9b1/9a07a146-6fcb-3531-bfd2-d46bbe4cecbd.wav",
   );
 
-/* doesn't compile */
-File.exists(f, (_, exists) => Js.log(exists));
+let checkFile =
+  File.exists(f)
+  >> (
+    e => {
+      Js.log(e);
+      Callback.return();
+    }
+  );
+
+let () = Callback.finish(checkFile);
+/*File.exists(f, (. _, e) => Js.log(e)); */
